@@ -323,6 +323,7 @@ function getScrollAmount() {
 function initDepartmentAnimation() {
     departmentsAnimation?.kill()
     departmentsBodyTween?.kill()
+
     let deltaX = getScrollAmount()
     
     if (deltaX === 0) {
@@ -359,7 +360,6 @@ function initDepartmentAnimation() {
             start: "top center",
             end: "top 10%",
             scrub: 1,
-            markers: true,
         },
         marginBottom: () => -document.querySelector(".footer__commercial").offsetHeight,
     });
